@@ -1,0 +1,183 @@
+/* ---------------------------------------- Start General Styling --------------------------------------- */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7ecde;
+}
+::selection {
+  background-color: #fec260;
+}
+/* ---------------------------------------- End General Styling --------------------------------------- */
+/* --------------------------------------- Start Title Styling --------------------------------------- */
+.title {
+  padding-block: 3rem;
+  border-bottom: 2px dotted black;
+}
+.title h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  font-style: normal;
+  color: #352e28;
+  font-size: 50px;
+  line-height: 60px;
+  position: relative;
+  display: inline;
+}
+.title h1::before {
+  content: '';
+  background-color: #fec260;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 20%;
+  z-index: -1;
+  transition: 0.5s all ease;
+}
+.title h1:hover::before {
+  height: 40%;
+}
+/* --------------------------------------- End Title Styling --------------------------------------- */
+/* ---------------------------------------- Start Form Styling --------------------------------------- */
+/* Start Form Title Style */
+.myForm {
+  border-bottom: 2px dotted black;
+  padding-block-end: 1rem;
+}
+.myForm .form-title {
+  padding-block: 2rem;
+  background: linear-gradient(to right, #3ca55b, #b5ac49);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.myForm .form-title h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 30px;
+}
+.myForm .form-title span i {
+  padding-inline: 0.5rem;
+}
+/* End Form Title Style */
+/* Start Form Input Style */
+.myForm .form-label {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  color: #212529;
+}
+.myForm .form-label span i {
+  padding-inline: 0.5rem;
+}
+.myForm button {
+  background-color: #d1512d;
+  color: #fff;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+.myForm button:hover {
+  background-color: #bb4120;
+  color: #fff;
+}
+input:focus {
+  border: 2px solid rgba(217, 156, 57, 0.2) !important;
+  box-shadow: 0 0 5px #d99c39 !important;
+}
+
+.input-container {
+  position: relative;
+}
+.error-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  display: none;
+}
+
+.success-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: green;
+  display: none;
+}
+input:invalid:not(:placeholder-shown) ~ .error-icon {
+  display: flex;
+}
+input:valid:not(:placeholder-shown) ~ .success-icon {
+  display: inline;
+}
+input:invalid:not(:placeholder-shown) {
+  border-color: red !important;
+  outline: none;
+}
+input:valid:not(:placeholder-shown) {
+  border-color: green !important;
+  outline: none;
+}
+/* End Form Input Style */
+/* ---------------------------------------- End Form Styling --------------------------------------- */
+/* --------------------------------------- Start Table Styling --------------------------------------- */
+.table thead th {
+  padding-block: 1rem;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  color: #212529;
+}
+.table tbody td {
+  padding-block: 0.5rem;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  color: #212529;
+}
+.table tbody td button {
+  color: #fff;
+}
+.table tbody td a {
+  text-decoration: none;
+  color: inherit;
+}
+.table tbody td .visit {
+  background-color: #9eb23b;
+}
+.table tbody td .visit:hover {
+  background-color: #8a9e23;
+}
+.table tbody td .delete {
+  background-color: #eb1c37;
+}
+.table tbody td .delete:hover {
+  background-color: #d30820;
+}
+
+.table tbody tr span i {
+  padding-right: 0.5rem;
+}
+/* --------------------------------------- End Table Styling --------------------------------------- */
